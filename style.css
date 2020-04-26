@@ -2,4 +2,6 @@ body{
     background-color: #04a6eb;
     color: #fdffff;
     width: 500px;
+    margin-right: auto;
+    margin-left: auto;
 }
