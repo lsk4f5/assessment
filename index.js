@@ -1,4 +1,8 @@
 'use strict';
+const userNameInput = document.getElementById('user-name');
+const assessmentButton = document.getElementById('assessment');
+const resultDivided = document.getElementById('result-area');
+const tweetDivided = document.getElementById('tweet-area');
 const answers = [
     '{userName}のいいところは声です。{userName}の特徴的な声はみんなを惹きつけ、心に残ります。',
     '{userName}のいいところはまなざしです。{userName}に見つめられた人は、気になって仕方がないでしょう。',
