@@ -39,3 +39,10 @@ function assessment(userName) {
     return result;
 }
 
+const tweetDivided = document.getElementById('tweet-area');
+assessmentButton.onclick = () => {
+  console.log('ボタンが押されました');
+  // TODO 診断結果表示エリアの作成
+  // TODO ツイートエリアの作成
+};
+
