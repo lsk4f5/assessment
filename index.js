@@ -3,6 +3,25 @@ const userNameInput = document.getElementById('user-name');
 const assessmentButton = document.getElementById('assessment');
 const resultDivided = document.getElementById('result-area');
 const tweetDivided = document.getElementById('tweet-area');
+
+assessmentButton.onclick = () => {
+  const userName = userNameInput.value;
+  if (userName.length === 0) { // 名前が空の時は処理を終了する
+    return;
+  }
+
+  // 診断結果表示エリアの作成
+  const header = document.createElement('h3');
+  header.innerText = '診断結果';
+  resultDivided.appendChild(header);
+
+  const paragraph = document.createElement('p');
+  const result = assessment(userName);
+  paragraph.innerText = result;
+  resultDivided.appendChild(paragraph);
+
+  // TODO ツイートエリアの作成
+};
 const answers = [
     '{userName}のいいところは声です。{userName}の特徴的な声はみんなを惹きつけ、心に残ります。',
     '{userName}のいいところはまなざしです。{userName}に見つめられた人は、気になって仕方がないでしょう。',
@@ -34,15 +53,10 @@ function assessment(userName) {
     }
     // 文字のコード番号の合計を回答の数で割って添字の数値を求める
     const index = sumOfCharCode % answers.length;
+
     let result = answers[index];
     result = result.replace(/\{userName\}/g, userName);
     return result;
 }
 
-const tweetDivided = document.getElementById('tweet-area');
-assessmentButton.onclick = () => {
-  console.log('ボタンが押されました');
-  // TODO 診断結果表示エリアの作成
-  // TODO ツイートエリアの作成
-};
 
