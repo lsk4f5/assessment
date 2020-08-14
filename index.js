@@ -36,7 +36,7 @@ assessmentButton.onclick = () => {
   const anchor = document.createElement('a');
   const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag='
     + encodeURIComponent('あなたのいいところ')
-    + encodeURIComponent('https://personalitytest-site.herokuapp.com/')
+    // + encodeURIComponent('https://personalitytest-site.herokuapp.com/')
     + '&ref_src=twsrc%5Etfw';
   anchor.setAttribute('href', hrefValue);
   anchor.className = 'twitter-hashtag-button';
