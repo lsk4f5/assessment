@@ -41,6 +41,7 @@ assessmentButton.onclick = () => {
   anchor.className = 'twitter-hashtag-button';
   anchor.setAttribute('data-text', result);
   anchor.innerText = 'Tweet #あなたのいいところ';
+  anchor.innerText = 'https://personalitytest-site.herokuapp.com/'
   tweetDivided.appendChild(anchor);
 
   // widgets.js の設定
